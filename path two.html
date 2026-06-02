@@ -1,0 +1,2228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Path Two: You Have AI History — The Claude Method by Just Bank AI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --orange: #E8612A;
+    --orange-bg: #FFF4EE;
+    --orange-border: #FECDAF;
+    --black: #1a1a1a;
+    --dark-gray: #3d3d3d;
+    --mid-gray: #767676;
+    --light-bg: #F5F5F5;
+    --medium-bg: #EBEBEB;
+    --border: #E2E2E2;
+    --white: #ffffff;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--dark-gray);
+    background: var(--white);
+  }
+
+  /* ── STICKY NAV ── */
+  #sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+  }
+  .nav-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav-inner::-webkit-scrollbar { display: none; }
+  .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--orange);
+    white-space: nowrap;
+    padding: 12px 16px 12px 0;
+    border-right: 1px solid var(--border);
+    margin-right: 8px;
+    flex-shrink: 0;
+    letter-spacing: 0.03em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2px;
+    list-style: none;
+    flex-shrink: 0;
+  }
+  .nav-links a {
+    display: block;
+    font-size: 11.5px;
+    font-weight: 500;
+    color: var(--mid-gray);
+    text-decoration: none;
+    padding: 12px 9px;
+    white-space: nowrap;
+    transition: color 0.15s;
+    letter-spacing: 0.02em;
+  }
+  .nav-links a:hover { color: var(--orange); }
+  .nav-links .sep {
+    color: var(--border);
+    padding: 12px 2px;
+    font-size: 11px;
+    user-select: none;
+  }
+
+  /* ── MAIN WRAPPER ── */
+  .wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+
+  /* ── HEADER ── */
+  .doc-header {
+    padding: 52px 0 40px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .meta-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--orange);
+    background: var(--orange-bg);
+    border: 1px solid var(--orange-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+  }
+  .doc-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.15;
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+  }
+  .doc-header .subtitle {
+    font-size: 16px;
+    color: var(--mid-gray);
+    font-weight: 400;
+    margin-top: 6px;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 6px;
+  }
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--black);
+    line-height: 1.2;
+    margin-bottom: 20px;
+    margin-top: 56px;
+    letter-spacing: -0.01em;
+  }
+  h2:first-of-type { margin-top: 0; }
+  h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 12px;
+    margin-top: 32px;
+    letter-spacing: -0.005em;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  /* ── NARRATIVE TEXT ── */
+  .narrative p {
+    color: var(--dark-gray);
+    margin-bottom: 16px;
+  }
+  .narrative p:last-child { margin-bottom: 0; }
+  .narrative ul, .narrative ol {
+    padding-left: 20px;
+    margin-bottom: 16px;
+  }
+  .narrative li { margin-bottom: 6px; }
+
+  /* ── FLOW LIST (the "their flow is" sections) ── */
+  .flow-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    counter-reset: flow-counter;
+  }
+  .flow-list li {
+    counter-increment: flow-counter;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14.5px;
+    color: var(--dark-gray);
+  }
+  .flow-list li:last-child { border-bottom: none; }
+  .flow-list li::before {
+    content: counter(flow-counter, decimal-leading-zero);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--orange);
+    min-width: 24px;
+    padding-top: 3px;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── INSTRUCTIONAL BLOCK ── */
+  .instructional-block {
+    background: var(--light-bg);
+    border-left: 3px solid var(--medium-bg);
+    padding: 18px 20px;
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+  }
+  .instructional-block .block-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+    margin-bottom: 10px;
+  }
+  .instructional-block p, .instructional-block li {
+    font-size: 14px;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+  }
+  .instructional-block p:last-child { margin-bottom: 0; }
+  .instructional-block ul {
+    padding-left: 18px;
+  }
+
+  /* ── ACTION REQUIRED BLOCK (before prompts with placeholders) ── */
+  .action-block {
+    background: var(--orange-bg);
+    border-left: 3px solid var(--orange-border);
+    padding: 16px 20px;
+    margin: 24px 0 8px;
+    border-radius: 0 4px 4px 0;
+  }
+  .action-block .block-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 8px;
+  }
+  .action-block p {
+    font-size: 13.5px;
+    color: var(--dark-gray);
+    margin-bottom: 6px;
+  }
+  .action-block p:last-child { margin-bottom: 0; }
+
+  /* ── PROMPT BOX ── */
+  .prompt-box {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    margin: 8px 0 32px;
+    overflow: hidden;
+  }
+  .prompt-header {
+    background: var(--medium-bg);
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  .prompt-header-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .prompt-arrow {
+    color: var(--orange);
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .prompt-header-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--dark-gray);
+  }
+  .prompt-number {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--mid-gray);
+  }
+  .copy-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    background: var(--orange);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 14px;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.1s;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+  .copy-btn:hover { background: #cf5224; }
+  .copy-btn.copied { background: #2a9d5c; }
+  .copy-btn:active { transform: scale(0.97); }
+  .prompt-body {
+    padding: 22px 22px;
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: var(--black);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  /* ── PLACEHOLDER PILL ── */
+  .placeholder-pill {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 4px;
+    letter-spacing: 0.02em;
+    vertical-align: baseline;
+    margin: 0 2px;
+  }
+
+  /* ── WHAT YOU ARE BUILDING ── */
+  .wyab-section {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 28px 28px;
+    margin: 32px 0;
+  }
+  .wyab-section h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--black);
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  .doc-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .doc-tag-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .doc-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    color: var(--dark-gray);
+    background: var(--medium-bg);
+    padding: 3px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    min-width: 160px;
+    text-align: center;
+  }
+  .doc-tag-desc {
+    font-size: 13.5px;
+    color: var(--mid-gray);
+  }
+
+  /* ── HOW TO SAVE BOX ── */
+  .save-box {
+    background: var(--orange-bg);
+    border: 1px solid var(--orange-border);
+    border-radius: 6px;
+    padding: 22px 24px;
+    margin-top: 24px;
+  }
+  .save-box .save-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 14px;
+  }
+  .save-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: save-counter;
+  }
+  .save-steps li {
+    counter-increment: save-counter;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 13.5px;
+    color: var(--dark-gray);
+    padding: 7px 0;
+    border-bottom: 1px solid var(--orange-border);
+    line-height: 1.6;
+  }
+  .save-steps li:last-child { border-bottom: none; }
+  .save-steps li::before {
+    content: counter(save-counter);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 22px;
+    height: 22px;
+    background: var(--orange);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .save-note {
+    font-size: 13px;
+    color: var(--mid-gray);
+    font-style: italic;
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── WHO THIS IS FOR ── */
+  .who-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+  }
+  .who-tag {
+    display: inline-block;
+    font-size: 12.5px;
+    color: var(--dark-gray);
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  /* ── MINI PROMPT STEPS ── */
+  .steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  .steps-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14.5px;
+    color: var(--dark-gray);
+    line-height: 1.6;
+  }
+  .steps-list li:last-child { border-bottom: none; }
+  .step-num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    background: var(--black);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 0;
+  }
+
+  /* ── CONTENT GRID LIST ── */
+  .content-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 12px 0 20px;
+  }
+  .content-chip {
+    font-size: 12.5px;
+    color: var(--dark-gray);
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    padding: 4px 11px;
+    border-radius: 4px;
+  }
+
+  /* ── SECTION ANCHOR OFFSET ── */
+  .section-anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 2px solid var(--orange);
+    padding: 24px 32px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 64px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .footer-left {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black);
+    letter-spacing: 0.08em;
+  }
+  .footer-left .x-sep { color: var(--orange); }
+  .footer-right {
+    font-size: 12px;
+    color: var(--mid-gray);
+    letter-spacing: 0.05em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .wrapper { padding: 0 20px 60px; }
+    #sticky-nav { padding: 0 16px; }
+    .doc-header h1 { font-size: 32px; }
+    footer { padding: 20px; }
+    .doc-tag { min-width: 120px; font-size: 10px; }
+    .doc-tag-row { flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- STICKY NAV -->
+<nav id="sticky-nav">
+  <div class="nav-inner">
+    <div class="nav-brand">The Claude Method</div>
+    <ul class="nav-links">
+      <li><a href="#intro">Intro</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#what-you-build">What You Build</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#who-this-is-for">Who It's For</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#before-you-start">Before You Start</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-1">Prompt 1</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-2">Prompt 2</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-3">Prompt 3</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-4">Prompt 4</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-5">Prompt 5</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-6">Prompt 6</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#prompt-7">Prompt 7</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#after-claude">After Claude</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-1">Step 1</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-2">Step 2</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-3">Step 3</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-4">Step 4</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-5">Step 5</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-6">Step 6</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#step-7">Step 7</a></li>
+      <li><span class="sep">|</span></li>
+      <li><a href="#simple-flow">Simple Flow</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="doc-header" id="intro">
+    <div class="meta-pill">By Just Bank AI</div>
+    <h1>Path Two:<br>You Have AI History</h1>
+    <div class="subtitle">Extracting the breadcrumbs. Bringing them into Claude.</div>
+  </div>
+
+  <!-- INTRO NARRATIVE -->
+  <span class="section-anchor" id="intro-text"></span>
+  <div class="narrative">
+    <p>This path is for the person who already has creative history sitting inside an AI tool somewhere.</p>
+    <p>Maybe they have used ChatGPT for captions. Maybe they have used Gemini for business ideas. Maybe they have used Claude for writing. Maybe they have used AI for branding, visuals, prompts, offers, content calendars, course ideas, social media posts, sales pages, image prompts, or creative direction.</p>
+    <p>That history matters.</p>
+    <p>Because even if it feels messy, random, scattered, or buried inside old chats, there are probably useful pieces inside it.</p>
+    <p>Their tone. Their preferences. Their corrections. Their formatting style. Their visual language. Their brand rules. Their "no, not like that" moments. Their repeated ideas. Their tools. Their projects. Their content patterns. Their creative fingerprints.</p>
+    <p>Path Two is about pulling that information out, cleaning it up, and bringing it into Claude so Claude does not feel like a brand new stranger with a keyboard.</p>
+    <p>The goal is not to copy another AI system into Claude forever. The goal is to give Claude a better first impression of who they are, how they create, and what their brand needs from the beginning.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- WHAT YOU ARE BUILDING -->
+  <span class="section-anchor" id="what-you-build"></span>
+  <h2>What You Are Building</h2>
+  <div class="narrative">
+    <p>By the end of this path, you will have produced <strong>9 core documents</strong> that live inside your Claude Project Knowledge. These become the creative operating system Claude pulls from every time you work inside that project.</p>
+  </div>
+
+  <div class="wyab-section">
+    <h3>The 9 Documents This Path Produces</h3>
+    <div class="doc-tags">
+      <div class="doc-tag-row">
+        <span class="doc-tag">MASTER_PROFILE</span>
+        <span class="doc-tag-desc">Your core creative identity, brand context, audience, offers, and overall working profile</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">BRAND_VOICE</span>
+        <span class="doc-tag-desc">Voice, tone, writing style, rhythm, phrases to avoid, caption and sales style</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">VISUAL_STYLE</span>
+        <span class="doc-tag-desc">Aesthetic direction, colors, photography rules, AI image preferences, visual non-negotiables</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">AI_TWIN_RULES</span>
+        <span class="doc-tag-desc">Identity-locking rules, prompt structure, visual consistency, styling preferences</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">CONTENT_SYSTEM</span>
+        <span class="doc-tag-desc">Content pillars, formats, platform strategy, hook style, CTA style, recurring themes</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">OFFERS_AND_PROJECTS</span>
+        <span class="doc-tag-desc">Offers, services, products, course ideas, brand ecosystem, clients, and active projects</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">WORKFLOW_AND_TOOLS</span>
+        <span class="doc-tag-desc">Tools, how you use them, how you work with AI, how you give feedback</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">NON_NEGOTIABLES</span>
+        <span class="doc-tag-desc">Rules Claude should never ignore, things you always correct, mistakes to actively avoid</span>
+      </div>
+      <div class="doc-tag-row">
+        <span class="doc-tag">FEEDBACK_LOOP</span>
+        <span class="doc-tag-desc">A living document that captures corrections, approved examples, and updated rules over time</span>
+      </div>
+    </div>
+
+    <div class="save-box">
+      <div class="save-title">How To Save Each Document Into Your Claude Project</div>
+      <ol class="save-steps">
+        <li><span>Open your Claude Project and click <strong>Add content</strong> in the Knowledge section on the left sidebar.</span></li>
+        <li><span>Select <strong>Add text content</strong> from the options that appear.</span></li>
+        <li><span>Copy the full document Claude wrote in your chat and paste it into the text box.</span></li>
+        <li><span>Title it using the document name shown above — for example, <strong>BRAND_VOICE</strong> — then save.</span></li>
+        <li><span>Repeat for each document. One knowledge block per document.</span></li>
+      </ol>
+      <p class="save-note"><em>Once saved, Claude will reference these documents automatically every time you work inside that Project. You never have to paste them again.</em></p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- WHO THIS IS FOR -->
+  <span class="section-anchor" id="who-this-is-for"></span>
+  <h2>Who This Is For</h2>
+  <div class="narrative">
+    <p>Path Two is for people who already have AI history. They may have used ChatGPT, Gemini, Claude, Perplexity, Grok, or another AI assistant for any of the following:</p>
+  </div>
+  <div class="content-grid">
+    <span class="content-chip">Content</span>
+    <span class="content-chip">Branding</span>
+    <span class="content-chip">AI images</span>
+    <span class="content-chip">Prompts</span>
+    <span class="content-chip">Business ideas</span>
+    <span class="content-chip">Offers</span>
+    <span class="content-chip">Captions</span>
+    <span class="content-chip">Strategy</span>
+    <span class="content-chip">Research</span>
+    <span class="content-chip">Visual direction</span>
+    <span class="content-chip">Client work</span>
+    <span class="content-chip">Course creation</span>
+    <span class="content-chip">Sales pages</span>
+    <span class="content-chip">Emails</span>
+    <span class="content-chip">Digital products</span>
+    <span class="content-chip">Workflow building</span>
+  </div>
+  <div class="narrative">
+    <p>That means one of those tools may already hold pieces of their voice, preferences, creative patterns, brand logic, visual taste, and workflow. The job is to extract the useful parts of that history and bring them into Claude.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- BEFORE YOU START -->
+  <span class="section-anchor" id="before-you-start"></span>
+  <h2>Before You Start</h2>
+  <div class="narrative">
+    <p>Before running the prompts, they need a place to save the results. They can use:</p>
+  </div>
+  <div class="instructional-block">
+    <div class="block-label">What you need ready</div>
+    <ul>
+      <li>Google Docs, Notion, Apple Notes, Microsoft Word, or any plain text workspace where they can copy, paste, review, and organize information</li>
+      <li>Access to the AI account they have used the most for creative work — ChatGPT, Claude, Gemini, Perplexity, Grok, or another assistant</li>
+      <li>If they have multiple accounts, start with the one that has the most history connected to their content, branding, visuals, prompts, business projects, or creative direction</li>
+    </ul>
+    <p style="margin-top:12px;">Once the AI gives them the extraction, they should save it. Not rely on keeping it buried inside a chat thread. This extraction is going to become part of their Claude setup.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PATH TWO OVERVIEW FLOW -->
+  <span class="section-anchor" id="overview-flow"></span>
+  <h2>Path Two Overview</h2>
+  <div class="narrative">
+    <p>For someone with AI history, they are not starting from zero. They are extracting what already exists. Here is the full flow from start to locked baseline:</p>
+  </div>
+  <ol class="flow-list">
+    <li>Run the Digital Breadcrumbs prompt in the AI tool they have used the most</li>
+    <li>Save the extraction somewhere outside of the chat</li>
+    <li>Run Peeling Back The Layers to go deeper</li>
+    <li>Lightly clean up the extraction</li>
+    <li>Bring the cleaned profile into Claude</li>
+    <li>Ask Claude to build the working profile</li>
+    <li>Make Claude prove it understands the profile</li>
+    <li>Correct what feels off immediately</li>
+    <li>Turn the profile into project folder documents</li>
+    <li>Test the AI Twin with real outputs</li>
+    <li>Create a feedback loop document</li>
+    <li>Lock the baseline once the setup feels aligned</li>
+  </ol>
+
+  <hr class="divider">
+
+  <!-- PROMPT 1 -->
+  <span class="section-anchor" id="prompt-1"></span>
+  <div class="section-label">Prompt 1 of 7</div>
+  <h2>The Digital Breadcrumbs</h2>
+  <div class="narrative">
+    <p>Use this first. Paste this into ChatGPT, Gemini, Claude, Perplexity, Grok, or whatever AI tool has the most creative history. This is the prompt that pulls out the first layer of useful context.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Run this inside the AI tool you have the most creative history with — not Claude (unless Claude is your primary tool). This is about extracting from wherever your breadcrumbs already live.</p>
+  </div>
+
+  <div class="prompt-box" id="box-1">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into your AI tool</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 1</span>
+        <button class="copy-btn" onclick="copyPrompt('box-1', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">I want you to pull together the pieces of my AI history that show how I create, communicate, think, brand, write, make decisions, and use AI.
+
+I am not asking you for a polished bio.
+I am not asking you to make me sound professional.
+I am not asking you to summarize me into a cute little paragraph.
+
+I want the actual digital breadcrumbs.
+
+Look through what you know from our past conversations, saved context, repeated instructions, preferences, corrections, creative projects, brand work, content requests, visual direction, prompt patterns, tools, workflows, and the way I naturally communicate.
+
+Focus only on the information that would help me move my creative identity, brand voice, content style, AI twin, visual direction, workflows, tools, preferences, and creative brain into another AI system.
+
+Organize everything into the sections below.
+
+1. WHAT THIS AI SYSTEM HAS REMEMBERED ABOUT ME
+
+List anything you have stored, remembered, or consistently learned about me that connects to:
+
+my brand
+my voice
+my content style
+my writing preferences
+my visual identity
+my AI twin
+my prompt style
+my creative workflow
+my business projects
+my tools
+my audience
+my offers
+my formatting rules
+my aesthetic preferences
+my recurring corrections
+my communication style
+my content strategy
+my visual direction
+my brand rules
+my AI usage patterns
+
+Keep this as close to the original wording as possible.
+
+Do not over-polish it.
+Do not make it sound prettier than it is.
+Do not summarize away the small details.
+
+If something feels oddly specific but connected to how I create, include it.
+
+2. THE RULES I KEEP COMING BACK TO
+
+Identify the instructions, preferences, rules, and corrections I repeat often.
+
+Include things like:
+
+how I want writing formatted
+words or phrases I dislike
+tone preferences
+style preferences
+visual rules
+prompting rules
+AI image rules
+branding rules
+content rules
+caption preferences
+platform preferences
+what I usually correct
+what I usually ask you to redo
+what I say when something feels wrong
+what I tend to ask for again and again
+
+I want the tiny details here.
+
+The repeated "no, not like that" moments matter because they show what my taste actually is.
+
+3. THE PATTERNS IN HOW I CREATE
+
+Look across my history and identify the patterns in my creative process.
+
+Tell me what I naturally return to.
+
+Include:
+
+the kinds of projects I build
+the types of content I create
+the brands or clients I work on
+the tools I use
+the platforms I care about
+the visual styles I repeat
+the types of prompts I ask for
+the way I develop offers
+the way I build courses or modules
+the way I think through strategy
+the way I refine ideas
+the way I give feedback
+the type of output I usually want
+the difference between what I ask for first and what I actually approve later
+
+Do not make this generic.
+
+I want you to look for the fingerprints.
+
+The things that make my creative process mine.
+
+4. HOW I NATURALLY COMMUNICATE
+
+Analyze the way I talk to AI.
+
+Do not clean it up too much.
+
+Pay attention to:
+
+my tone
+my pacing
+my vocabulary
+my emotional expression
+my shorthand
+my formatting habits
+how direct I am
+how much detail I give
+how I correct things
+how I ask for changes
+how I react when something is wrong
+how I react when something is close
+what phrases I use often
+how I describe my taste
+how I describe what feels "off"
+how I explain what I want
+how I make decisions out loud
+
+I want this to feel real.
+
+Not like a corporate communication profile.
+Not like a personality assessment.
+Like an actual read on how I communicate when I am creating.
+
+5. MY AI BRAND BLUEPRINT
+
+Create a clear, detailed profile of my AI creator identity.
+
+Include:
+
+my brand voice
+my writing style
+my visual style
+my content style
+my audience
+my offers
+my creative direction
+my favorite tools
+my recurring themes
+my signature aesthetics
+my workflow habits
+my formatting preferences
+my prompt style
+my content pillars
+my brand fingerprints
+my emotional tone
+my decision-making patterns
+my strengths as a creator
+the kind of support I usually need from AI
+
+This should feel like a working creative blueprint that could help another AI system understand me faster.
+
+6. MY VISUAL LANGUAGE AND AESTHETIC CODES
+
+Pull out anything connected to how I like things to look.
+
+Include:
+
+colors
+lighting
+photography style
+layout preferences
+image prompt patterns
+design style
+brand aesthetics
+fonts if known
+mood
+texture
+props
+wardrobe direction
+editing style
+composition preferences
+things I dislike visually
+things I keep requesting
+any visual rules connected to my AI twin, brand images, client visuals, content graphics, or campaign imagery
+
+Be specific.
+
+Do not just say "clean" or "luxury" unless you explain what that means in my world.
+
+7. MY CONTENT AND BRAND VOICE DNA
+
+Pull together the way I write, teach, sell, caption, explain, and create content.
+
+Include:
+
+my hook style
+caption style
+storytelling style
+CTA preferences
+content tone
+emotional depth
+how I like to educate
+how I like to sell
+how I like to position offers
+how I talk to my audience
+how I want people to feel
+what I avoid sounding like
+what makes content feel like me
+what makes content feel not like me
+
+I want this to be useful for captions, carousels, emails, course lessons, sales pages, website copy, prompts, and brand messaging.
+
+8. MY TOOLS, SYSTEMS, AND WORKFLOW
+
+Identify the tools, platforms, and systems I use or mention often.
+
+Include anything related to:
+
+ChatGPT
+Claude
+Canva
+Higgsfield
+Skool
+Stan Store
+Showit
+Flodesk
+Tally
+Pinterest
+Instagram
+Facebook
+Threads
+TikTok
+Notion
+Google Docs
+CapCut
+AI image tools
+brand documents
+course modules
+content calendars
+prompt books
+client workflows
+
+Also explain how I seem to use these tools together.
+
+Do I use them for strategy?
+Visuals?
+Content?
+Course creation?
+Client work?
+AI twins?
+Brand systems?
+Digital products?
+
+9. WHAT SHOULD BE TRANSFERRED INTO ANOTHER AI SYSTEM
+
+After you extract everything, tell me what information would be most useful to copy into another AI system like Claude.
+
+Separate it into:
+
+must-transfer information
+helpful-but-not-essential information
+personal context that may or may not belong
+outdated or unnecessary information to leave behind
+details that should be cleaned up before moving
+
+Do not make decisions for me too aggressively.
+
+Just help me see what matters.
+
+10. FINAL SUMMARY
+
+At the end, give me a detailed but organized summary called:
+
+"My Creative AI Profile"
+
+This should be something I can save, study, clean up, and eventually paste into Claude or another AI system.
+
+Keep the nuance.
+Keep the small details.
+Keep the texture.
+Keep the things that make my output feel like me.
+
+The goal is not to make me sound impressive.
+
+The goal is to make another AI system understand how I actually create.</div>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">After Prompt 1</div>
+    <p>Once the AI gives the extraction, copy the full response into notes. Do not worry about making it perfect yet. The goal right now is to capture the raw material.</p>
+    <p>Do not delete too much too quickly. Sometimes the small details are the things that make the AI setup feel more like them later — a random formatting rule, a visual preference, a phrase they keep using, a way they describe their content, a correction they have given over and over again. That is the good stuff.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROMPT 2 -->
+  <span class="section-anchor" id="prompt-2"></span>
+  <div class="section-label">Prompt 2 of 7</div>
+  <h2>Peeling Back The Layers</h2>
+  <div class="narrative">
+    <p>Use this after Prompt 1 gives the first extraction. This prompt makes the AI go deeper and find the patterns it may have missed. Paste this into the same AI tool.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Run this in the same AI tool you used for Prompt 1, immediately after saving the first extraction. This is not a repeat — it goes underneath the obvious and pulls out the behavioral patterns, taste fingerprints, and creative instincts the first pass often misses.</p>
+  </div>
+
+  <div class="prompt-box" id="box-2">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into your AI tool</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 2</span>
+        <button class="copy-btn" onclick="copyPrompt('box-2', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">Now I want you to go deeper.
+
+The first extraction gave me the obvious pieces. This time, I want you to look underneath the surface and identify the patterns, preferences, corrections, creative instincts, and repeated behaviors that may not have been listed clearly the first time.
+
+Do not repeat the same exact response unless something truly belongs here.
+
+I want you to peel back the layers.
+
+Look across everything you know about how I use AI, how I create, how I communicate, how I brand, how I make decisions, how I refine content, how I correct output, and how I describe what I want.
+
+Organize the deeper extraction into the sections below.
+
+1. THE THINGS I KEEP TRYING TO SAY WITHOUT ALWAYS SAYING DIRECTLY
+
+Identify the deeper preferences behind my requests.
+
+For example:
+
+When I say something is too generic, what am I usually asking for?
+When I say something does not sound like me, what does that actually mean?
+When I say something needs more bite, what kind of bite do I mean?
+When I say something is too AI, what am I reacting to?
+When I say something is too polished, too fluffy, too corporate, too basic, too short, or too much, what pattern are you seeing?
+When I approve something, what made it work?
+
+Explain the underlying taste, not just the literal feedback.
+
+2. MY CREATIVE NON-NEGOTIABLES
+
+List the things that seem non-negotiable in my creative work.
+
+Include:
+
+tone non-negotiables
+formatting non-negotiables
+visual non-negotiables
+brand non-negotiables
+prompting non-negotiables
+content non-negotiables
+client work non-negotiables
+AI twin non-negotiables
+things I repeatedly reject
+things I repeatedly protect
+
+Be honest and specific.
+
+Do not soften this into vague advice.
+
+3. MY PERSONAL LANGUAGE PATTERN
+
+Analyze what my personal voice pattern actually means based on how I ask for edits and what I approve.
+
+Break it down into:
+
+sentence rhythm
+word choice
+emotional tone
+level of detail
+metaphors
+bite
+softness
+directness
+humor
+sass
+vulnerability
+storytelling style
+teaching style
+sales style
+caption style
+course lesson style
+
+Then explain how another AI should write when I ask for something to sound more like me.
+
+4. MY CREATIVE TASTE PROFILE
+
+Create a profile of my taste.
+
+Include what I seem drawn to in:
+
+branding
+course modules
+digital products
+AI education
+caption writing
+visuals
+Canva graphics
+campaign imagery
+client brand systems
+AI twin prompts
+luxury aesthetics
+feminine aesthetics
+bold messaging
+soft messaging
+storytelling
+structured teaching
+
+Also include what I seem to dislike.
+
+I want this to help another AI understand my taste faster without me having to keep correcting everything from scratch.
+
+5. MY AI WORKFLOW PATTERN
+
+Map how I usually work with AI.
+
+Include things like:
+
+how I start a project
+how I dump ideas
+how I ask for structure
+how I ask for rewrites
+how I approve or reject drafts
+how I build from messy thoughts into polished assets
+how I use AI for branding
+how I use AI for visuals
+how I use AI for courses
+how I use AI for clients
+how I use AI when I feel overwhelmed
+how I use AI when I am trying to move fast
+how I want AI to respond when I am frustrated or confused
+
+Make this practical.
+
+This should help another AI become a better creative partner for me.
+
+6. MY PROJECT ECOSYSTEM
+
+Identify the major projects, brands, clients, offers, courses, and systems I have worked on or repeatedly referenced.
+
+For each one, include:
+
+what it is
+what role I seem to play
+what the brand style or content direction is
+what kind of outputs I usually ask for
+any important rules or preferences
+anything another AI should know before helping me with it
+
+Only include what is relevant to creative work, branding, content, visuals, offers, AI workflows, or business systems.
+
+7. MY CONTENT CREATION DNA
+
+Go deeper into the type of content I create and ask for.
+
+Include:
+
+the topics I return to
+the emotional angles I like
+the buyer psychology I care about
+how I like hooks to feel
+how I like captions to flow
+how I like CTAs to sound
+how I teach
+how I sell
+how I blend personal storytelling with strategy
+how I balance softness and directness
+how I want content to feel to the reader
+
+I do not want generic content advice.
+
+I want my actual content DNA pulled from the way I work.
+
+8. MY VISUAL CREATION DNA
+
+Go deeper into my image and design preferences.
+
+Include:
+
+AI image prompt structure
+identity locking preferences
+aesthetic preferences
+lighting preferences
+camera/detail preferences
+editing style
+brand imagery style
+client image rules
+campaign image patterns
+what makes an image feel expensive
+what makes an image feel basic
+what I tend to correct in image prompts
+what another AI needs to know before writing visuals for me
+
+Be specific and practical.
+
+9. WHAT ANOTHER AI WOULD PROBABLY GET WRONG ABOUT ME
+
+Tell me what a fresh AI system would likely misunderstand about me if it did not have this context.
+
+Include things like:
+
+making my writing too generic
+making my brand too polished
+making my content too short
+making my visuals too basic
+missing my emotional depth
+missing my formatting preferences
+over-explaining
+using phrases I hate
+making things sound too corporate
+flattening my voice
+ignoring the specificity I need
+missing the difference between "clean" and "boring"
+missing the difference between "luxury" and "lifeless"
+
+Then tell me how to prevent those mistakes.
+
+10. THE CLEAN TRANSFER VERSION
+
+At the end, create a section called:
+
+"Claude-Ready Creative Context"
+
+This should be a detailed but organized version of what another AI should know about me.
+
+Write it in a way that I can copy and paste into Claude as part of my setup.
+
+Make it clear, direct, detailed, and useful.
+
+Do not make it sound like a résumé.
+Do not make it sound like a corporate brand guide.
+Do not make it sound like a motivational bio.
+
+Make it feel like a living creative profile that helps Claude understand how to actually work with me.
+
+Keep the texture.
+Keep the nuance.
+Keep the weird little specifics.
+Keep the repeated corrections.
+Keep the way I actually create.</div>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">After Prompt 2</div>
+    <p>Once the deeper extraction is complete, save it with the first extraction. At this point they may have a lot of information — that is good. It may feel messy, repetitive, or include things that do not belong. That is normal.</p>
+    <p>The next step is not to make it pretty. The next step is to clean it lightly so it becomes useful.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROMPT 3 -->
+  <span class="section-anchor" id="prompt-3"></span>
+  <div class="section-label">Prompt 3 of 7</div>
+  <h2>The Light Clean-Up Prompt</h2>
+  <div class="narrative">
+    <p>Use this after the extraction has been copied into Google Docs, Apple Notes, Notion, or wherever they are saving it. This prompt helps clean the raw extraction without making it sterile.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Paste both extractions (from Prompts 1 and 2) into a document first. Then run this prompt — either back in the original AI tool or directly in Claude. This is the bridge step between raw material and a usable profile.</p>
+  </div>
+
+  <div class="action-block">
+    <div class="block-label">✏ Action required before copying</div>
+    <p>This prompt contains a placeholder where you will paste your raw extraction. Do not copy it until you have saved your Prompt 1 and Prompt 2 outputs and are ready to paste them in.</p>
+  </div>
+
+  <div class="prompt-box" id="box-3">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Fill in the placeholder, then copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 3</span>
+        <button class="copy-btn" onclick="copyPrompt('box-3', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">I am going to paste in a raw AI history extraction.
+
+Your job is to help me lightly clean it up so it becomes useful context for Claude or another AI system.
+
+Do not turn this into a polished bio.
+Do not make it sound like a résumé.
+Do not rewrite my entire identity into corporate language.
+Do not remove the small details that make the profile useful.
+
+I want you to clean it the way someone would clean a messy room before a friend comes over.
+
+Not sterile.
+Not showroom perfect.
+Just easier to use.
+
+Please go through the extraction and organize it into a cleaner working profile.
+
+Remove or flag anything that is:
+
+outdated
+incorrect
+too personal for an AI workspace
+not relevant to my brand
+not relevant to my content
+not relevant to my visuals
+not relevant to my AI twin
+not relevant to my creative process
+not relevant to my workflow
+duplicated too many times
+confusing without context
+
+But keep anything that helps explain:
+
+how I write
+how I talk
+how I create
+how I give feedback
+how I want AI to support me
+what tools I use
+what my brand feels like
+what my visuals look like
+what my content style is
+what I usually correct
+what I never want changed
+what makes my work feel like mine
+
+Organize the cleaned version into these sections:
+
+1. Core Creative Identity
+Who I am as a creator, brand builder, visual storyteller, content strategist, or business owner.
+
+2. Brand Voice and Writing Style
+How I want my words to sound, feel, move, and land.
+
+3. Formatting and Output Preferences
+How I like information structured, what I dislike, and what rules should be followed when creating for me.
+
+4. Visual Style and Aesthetic Direction
+My colors, moods, image preferences, AI image rules, layout style, and visual fingerprints.
+
+5. Content Strategy and Messaging Style
+How I create content, sell, teach, tell stories, write captions, build hooks, and speak to my audience.
+
+6. AI Twin and Prompting Rules
+Any identity-locking rules, prompt preferences, AI image preferences, and important instructions for visual consistency.
+
+7. Tools and Workflow
+The tools, platforms, systems, and creative processes I use.
+
+8. Projects, Brands, Clients, and Offers
+Any current or recurring projects that matter for future AI support.
+
+9. Important Corrections and Non-Negotiables
+The things I repeatedly correct or never want ignored.
+
+10. Information To Leave Out
+Anything that should probably not be moved into Claude or another AI system.
+
+After organizing it, give me a final section called:
+
+"Ready-To-Use Claude Profile"
+
+This should be the cleaned, useful version I can paste into Claude.
+
+Keep it detailed.
+Keep it specific.
+Keep the texture.
+Do not flatten my voice into beige oatmeal.
+
+Here is my raw extraction:
+
+<span class="placeholder-pill">PASTE YOUR RAW EXTRACTION HERE</span></div>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">After Prompt 3</div>
+    <p>Once the cleaned profile is ready, save it. Skim it and remove anything you do not want in Claude — old projects you no longer care about, private personal details, wrong assumptions, anything too sensitive, or duplicate sections.</p>
+    <p>A slightly messy but accurate document is better than a perfectly polished one that lost all the details that made it valuable.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROMPT 4 -->
+  <span class="section-anchor" id="prompt-4"></span>
+  <div class="section-label">Prompt 4 of 7</div>
+  <h2>Claude Setup Prompt</h2>
+  <div class="narrative">
+    <p>Use this when they are ready to bring the cleaned extraction into Claude. This is the first prompt that runs inside Claude — not in the other AI tool. Paste the cleaned profile directly into this prompt where indicated.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Run this inside Claude — ideally inside the Claude Project you are building. This turns the raw cleaned extraction into a working profile Claude can actually use. The placeholder at the bottom is where the cleaned extraction goes.</p>
+  </div>
+
+  <div class="action-block">
+    <div class="block-label">✏ Action required before copying</div>
+    <p>You need your cleaned extraction from Prompt 3 ready to paste. Copy this prompt, then replace the placeholder at the bottom with your full cleaned profile before sending it to Claude.</p>
+  </div>
+
+  <div class="prompt-box" id="box-4">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Fill in the placeholder, then copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 4</span>
+        <button class="copy-btn" onclick="copyPrompt('box-4', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">I am setting up Claude to support my creative work, brand voice, content style, AI twin, visual direction, prompts, workflows, tools, offers, and business systems.
+
+Below is a cleaned extraction from my previous AI history.
+
+It includes details about how I create, how I communicate, how I write, how I give feedback, what I care about visually, what tools I use, what projects I work on, what I dislike, what I repeat, what I correct, and what makes my creative output feel like me.
+
+Please read through this carefully and turn it into a working Claude profile you can use to support me moving forward.
+
+I do not want you to make this generic.
+
+Do not flatten my voice.
+Do not turn this into corporate brand language.
+Do not remove important details just because they seem small.
+Do not ignore the repeated preferences.
+Do not clean it so much that it loses the texture.
+
+Your job is to understand how I actually work.
+
+Please organize the information into a Claude-ready profile with these sections:
+
+1. Who I Am As A Creator
+Summarize my creative identity, business context, communication style, and the type of work I use AI for.
+
+2. My Brand Voice
+Explain how I like writing to sound, including tone, rhythm, emotional depth, directness, softness, sass, storytelling, and any words or styles I avoid.
+
+3. My Content Style
+Explain how I create captions, hooks, carousels, course lessons, emails, sales pages, social posts, and educational content.
+
+4. My Visual Style
+Summarize my aesthetic preferences, colors, imagery style, AI image preferences, campaign style, brand visuals, and anything related to photography or design direction.
+
+5. My AI Workflow
+Explain how I use AI, how I like to collaborate with AI, how I give feedback, how I refine outputs, and what kind of support I usually need.
+
+6. My Tools and Platforms
+List the tools and platforms I use and how they connect to my workflow.
+
+7. My Projects, Brands, Offers, and Clients
+Organize the major projects, brands, clients, offers, or systems included in the extraction so you understand what I may ask for in the future.
+
+8. My Formatting Preferences
+Explain how I like responses structured and what formatting habits should be avoided.
+
+9. My Non-Negotiables
+List the things you should always remember when helping me create.
+
+10. How To Support Me Best
+Give yourself clear working instructions for how to respond to me, how to help me think, how to write in my style, how to create visuals for me, and how to avoid giving me generic AI output.
+
+After you organize the profile, give me a final section called:
+
+"What I Understand About You Now"
+
+In that section, explain what you understand about my creative identity, brand voice, AI workflow, visual style, communication preferences, and the way you should support me.
+
+Here is the extraction:
+
+<span class="placeholder-pill">PASTE CLEANED EXTRACTION HERE</span></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROMPT 5 -->
+  <span class="section-anchor" id="prompt-5"></span>
+  <div class="section-label">Prompt 5 of 7</div>
+  <h2>Claude Confirmation Prompt</h2>
+  <div class="narrative">
+    <p>Use this after Claude creates the profile. This makes Claude prove it understands the profile instead of just organizing it. Pretty does not mean accurate. You want Claude to show you what it understands before you start trusting it with your content, visuals, offers, or AI Twin.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Run this in Claude immediately after receiving the working profile from Prompt 4. This is not optional. This is the step most people skip — and it is the one that tells you whether Claude actually understood the profile or just organized it into something that sounds good.</p>
+  </div>
+
+  <div class="prompt-box" id="box-5">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 5</span>
+        <button class="copy-btn" onclick="copyPrompt('box-5', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">Before we move forward, I want to make sure you actually understand the profile I just gave you.
+
+Please tell me what you now understand about:
+
+my creative identity
+my brand voice
+my writing style
+my visual style
+my content style
+my AI workflow
+my formatting preferences
+my tools and platforms
+my projects and offers
+my non-negotiables
+the way I give feedback
+the way I want you to support me
+
+Do not just repeat the profile back to me.
+
+I want you to interpret it.
+
+Tell me what kind of creator you understand me to be.
+Tell me what makes my voice different.
+Tell me what my content should feel like.
+Tell me what my visuals should feel like.
+Tell me what kind of AI support will actually help me.
+Tell me what you should avoid doing when creating for me.
+
+Then give me a section called:
+
+"Where I May Need More Detail"
+
+In that section, tell me what information is still missing or unclear so I can fill the gaps before we start building anything deeper.
+
+Be honest.
+Be specific.
+Do not flatter me.
+Do not make assumptions without telling me.
+This is setup, not performance.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROMPT 6 -->
+  <span class="section-anchor" id="prompt-6"></span>
+  <div class="section-label">Prompt 6 of 7</div>
+  <h2>Correction Prompt for Claude</h2>
+  <div class="narrative">
+    <p>Use this when Claude gets the profile mostly right but something feels off. This is where the training actually happens. If Claude says the voice is "professional and inspiring" but the real voice is more "warm, direct, emotionally specific, slightly unhinged in the best way, and allergic to beige AI language" — correct it right there.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Run this any time something in Claude's interpretation feels wrong, too generic, too polished, or not accurate. You can run it multiple times. Each correction tightens the profile. The goal is not perfection on the first pass — it is accuracy by the end.</p>
+  </div>
+
+  <div class="action-block">
+    <div class="block-label">✏ Action required before copying</div>
+    <p>This prompt has three placeholders you need to fill in before sending. Replace each one with your specific feedback before copying into Claude.</p>
+  </div>
+
+  <div class="prompt-box" id="box-6">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Fill in the placeholders, then copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 6</span>
+        <button class="copy-btn" onclick="copyPrompt('box-6', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">This is close, but a few things are off.
+
+Here is what you got right:
+
+<span class="placeholder-pill">LIST WHAT FELT RIGHT</span>
+
+Here is what feels wrong, too generic, too polished, too corporate, too vague, or not accurate:
+
+<span class="placeholder-pill">LIST WHAT FELT OFF</span>
+
+Here is what I want instead:
+
+<span class="placeholder-pill">EXPLAIN THE CORRECTION</span>
+
+Please update the working profile based on this feedback.
+
+Do not rewrite the entire thing unless necessary.
+Only revise the sections that need correcting.
+
+At the end, tell me:
+
+1. What you changed
+2. What you now understand differently
+3. How this correction should affect future outputs</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- PROMPT 7 -->
+  <span class="section-anchor" id="prompt-7"></span>
+  <div class="section-label">Prompt 7 of 7</div>
+  <h2>Final Lock-In Prompt</h2>
+  <div class="narrative">
+    <p>Use this after Claude finally gets the profile right. This locks the baseline so Claude stops treating every session like a fresh start. Once this runs, Claude has working instructions it filters everything through inside this project.</p>
+  </div>
+
+  <div class="instructional-block">
+    <div class="block-label">When to use this</div>
+    <p>Run this only after the profile feels accurate — after you have run the confirmation prompt, corrected what felt off, and the outputs are starting to land. This is the final step before you move into building project documents.</p>
+  </div>
+
+  <div class="prompt-box" id="box-7">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Prompt 7</span>
+        <button class="copy-btn" onclick="copyPrompt('box-7', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">This version feels aligned.
+
+Please treat this as the baseline working profile for how you support me moving forward inside this project.
+
+Use it when helping me with:
+
+brand voice
+content creation
+captions
+hooks
+carousels
+emails
+sales pages
+course lessons
+Skool modules
+AI image prompts
+AI twin prompts
+visual direction
+content calendars
+offer messaging
+client work
+workflow building
+strategy
+creative organization
+
+When I ask for something to feel like me, refer back to this profile.
+
+When I say "make it more me," "make it feel like my brand," "make it less AI," "give it more bite," "make it more visual," "make it cleaner," or "this feels off," use this profile to interpret what I mean.
+
+Do not make my content generic.
+Do not over-polish my voice.
+Do not strip out the specificity.
+Do not make things sound corporate, robotic, or beige.
+Do not ignore my formatting preferences.
+Do not forget the creative details that make the output feel like mine.
+
+Before creating anything major for me, use this profile as the creative filter.
+
+Please confirm what you are locking in as the working profile, then give me a short list of the main rules you will follow from this point forward.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- AFTER CLAUDE — NEXT STEPS -->
+  <span class="section-anchor" id="after-claude"></span>
+  <h2>After They Paste Everything Into Claude</h2>
+  <div class="narrative">
+    <p>After they paste the extraction into Claude and Claude builds out their AI Twin profile and project folder, the next step is not to immediately ask it for captions or prompts. The next step is to test, tighten, and train the workspace so Claude is not just holding information, but actually using it correctly.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 1 -->
+  <span class="section-anchor" id="step-1"></span>
+  <div class="section-label">Step 1 of 7</div>
+  <h2>Ask Claude to Build the Working Profile</h2>
+  <div class="narrative">
+    <p>Once they paste the cleaned extraction into Claude, their first job is to turn the raw information into something Claude can actually work from.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-1">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 1</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-1', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">I just pasted my AI history, creative context, brand voice, visual preferences, content style, workflow patterns, tools, and project information into this Claude Project.
+
+Now I want you to turn all of it into a clean working profile for this project folder.
+
+Do not make it generic.
+Do not turn it into a polished bio.
+Do not flatten the details.
+Do not remove the small preferences, corrections, repeated phrases, or creative rules just because they seem specific.
+
+Organize everything into a profile with these sections:
+
+1. Creative Identity
+Who I am as a creator, business owner, brand builder, content creator, or visual strategist.
+
+2. Brand Voice
+How my writing should sound, feel, move, and land.
+
+3. Content Style
+How I create captions, hooks, carousels, lessons, emails, social posts, offers, and educational content.
+
+4. Visual Style
+My aesthetic preferences, image style, colors, layouts, campaign direction, AI image rules, and visual non-negotiables.
+
+5. AI Twin Rules
+How you should preserve my voice, face, identity, visuals, formatting, and creative style when helping me create.
+
+6. Workflow and Tools
+The tools I use, how I use AI, how I like to build projects, and how you should support me inside this workspace.
+
+7. Formatting Preferences
+How I like responses structured and what formatting habits you should avoid.
+
+8. Current Projects, Offers, or Brand Ecosystem
+Any projects, services, offers, brands, clients, or products you should understand before helping me create.
+
+9. Non-Negotiables
+The things you should never ignore when creating for me.
+
+10. How To Support Me Best
+Give yourself clear instructions for how to work with me inside this project folder.
+
+At the end, give me a section called "What I Understand About You Now" and explain how you will use this profile moving forward.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 2 -->
+  <span class="section-anchor" id="step-2"></span>
+  <div class="section-label">Step 2 of 7</div>
+  <h2>Make Claude Prove It Understands You</h2>
+  <div class="narrative">
+    <p>This is the part most people skip. They paste the profile in, Claude says something pretty, and they think it is trained. Pretty does not mean accurate. You want Claude to show you what it understands before you start trusting it with your content, visuals, offers, or AI Twin.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-2">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 2</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-2', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">Before we build anything else, I want you to prove that you understand this project folder.
+
+Based on the profile and context I gave you, tell me:
+
+1. What kind of creator, brand, or business you understand me to be
+2. What my voice should sound like
+3. What my content should feel like
+4. What my visuals should look and feel like
+5. What my audience likely needs from me
+6. What my AI Twin should preserve
+7. What you should never do when creating for me
+8. What mistakes a generic AI assistant would probably make with my content
+9. What rules you will follow inside this project folder
+10. What information still feels unclear or incomplete
+
+Do not flatter me.
+Do not repeat my words back without interpreting them.
+Do not make assumptions without telling me.
+
+I want to know if you actually understand the creative world I am building.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 3 -->
+  <span class="section-anchor" id="step-3"></span>
+  <div class="section-label">Step 3 of 7</div>
+  <h2>Correct What Feels Off Immediately</h2>
+  <div class="narrative">
+    <p>This is where the training actually happens. If Claude says the voice is "professional and inspiring" but the real voice is more "warm, direct, emotionally specific, slightly unhinged in the best way, and allergic to beige AI language" — correct it right there.</p>
+  </div>
+
+  <div class="action-block">
+    <div class="block-label">✏ Action required before copying</div>
+    <p>Fill in all three placeholders before sending. Be specific — the more exact your corrections are, the more accurately Claude will update the profile.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-3">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Fill in the placeholders, then copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 3</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-3', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">This is close, but a few things are off.
+
+Here is what you got right:
+
+<span class="placeholder-pill">LIST WHAT FELT RIGHT</span>
+
+Here is what feels wrong, too generic, too polished, too corporate, too vague, or not accurate:
+
+<span class="placeholder-pill">LIST WHAT FELT OFF</span>
+
+Here is what I want instead:
+
+<span class="placeholder-pill">EXPLAIN THE CORRECTION</span>
+
+Please update the working profile based on this feedback.
+
+Do not rewrite the entire thing unless necessary.
+Only revise the sections that need correcting.
+
+At the end, tell me:
+
+1. What you changed
+2. What you now understand differently
+3. How this correction should affect future outputs</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 4 -->
+  <span class="section-anchor" id="step-4"></span>
+  <div class="section-label">Step 4 of 7</div>
+  <h2>Create the Project Folder Documents</h2>
+  <div class="narrative">
+    <p>Once the profile feels accurate, then they have Claude turn it into actual project folder documents. This matters because one big messy profile can become hard to use. Project documents give Claude clean "drawers" to pull from.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-4">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 4</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-4', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">Now that the working profile feels aligned, I want you to help me build the documents for this Claude Project folder.
+
+Create the following project documents based on everything I have given you:
+
+1. MASTER_PROFILE.md
+This should include my core creative identity, brand context, audience, offers, projects, and overall working profile.
+
+2. BRAND_VOICE.md
+This should include my voice, tone, writing style, rhythm, phrases to avoid, formatting preferences, caption style, storytelling style, teaching style, and sales style.
+
+3. VISUAL_STYLE.md
+This should include my aesthetic direction, colors, photography style, AI image rules, layouts, campaign direction, props, textures, design preferences, and visual non-negotiables.
+
+4. AI_TWIN_RULES.md
+This should include anything related to preserving my identity, voice, face, visual consistency, prompt structure, styling rules, image preferences, and identity-locking rules.
+
+5. CONTENT_SYSTEM.md
+This should include content pillars, content formats, platform strategy, caption structure, hook style, CTA style, recurring themes, and how to create content that sounds like me.
+
+6. OFFERS_AND_PROJECTS.md
+This should include my offers, services, products, course ideas, brand ecosystem, clients, projects, and anything you need to know when helping me build business assets.
+
+7. WORKFLOW_AND_TOOLS.md
+This should include the tools I use, how I use them, how I work with AI, how I like drafts created, how I give feedback, and how you should collaborate with me.
+
+8. NON_NEGOTIABLES.md
+This should include the rules you should never ignore, the things I always correct, the things I dislike, and the mistakes you should actively avoid.
+
+Write each document in a clean, practical format that can be copied directly into Claude Project Knowledge.
+
+Do not make them short.
+Do not make them fluffy.
+Make them detailed enough that this project folder can actually support me.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 5 -->
+  <span class="section-anchor" id="step-5"></span>
+  <div class="section-label">Step 5 of 7</div>
+  <h2>Test the AI Twin With Real Outputs</h2>
+  <div class="narrative">
+    <p>After the project folder is built, they need to test it with actual creation tasks. Not theory. Real outputs.</p>
+    <p>Start with these 3 tests. Review each output and ask: Does this sound like me? Does this look like me? Does this feel like the brand? Is it too clean, too generic, too AI, too short, too corporate, too vague, too boring, too much? That review becomes part of the training.</p>
+  </div>
+
+  <div class="action-block">
+    <div class="block-label">✏ Action required before copying</div>
+    <p>Each of the three test prompts below contains a topic or scene placeholder. Fill them in with something real and relevant to your brand before running the tests.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-5">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Fill in the placeholders, then copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 5</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-5', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">Test 1: Write a caption in my voice about <span class="placeholder-pill">TOPIC</span>.
+Make it sound like me, not like generic AI.
+Use the project profile, brand voice, and content system.
+
+Test 2: Create an AI image prompt for <span class="placeholder-pill">SCENE OR CONCEPT</span>.
+Use my visual style, AI Twin rules, and aesthetic direction.
+Make sure the prompt protects identity, styling, composition, and brand feel.
+
+Test 3: Create a content idea or carousel outline for <span class="placeholder-pill">TOPIC</span>.
+Use my content style, audience, messaging, and formatting preferences.
+Make it feel aligned with the brand profile in this project.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 6 -->
+  <span class="section-anchor" id="step-6"></span>
+  <div class="section-label">Step 6 of 7</div>
+  <h2>Create a Feedback Loop Document</h2>
+  <div class="narrative">
+    <p>This is the part that makes the project smarter over time. Every time Claude gives an output and the person corrects it, those corrections should be saved. Use this prompt to build the living feedback document, then use the mini prompt below it every time something needs to be logged.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-6a">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 6 — Create</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-6a', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">I want to create a living feedback document for this project folder.
+
+Every time I correct an output, I want you to help me capture the lesson so we can improve future results.
+
+Create a document called FEEDBACK_LOOP.md.
+
+Include sections for:
+
+1. Things Claude Got Right
+2. Things Claude Got Wrong
+3. Voice Corrections
+4. Visual Corrections
+5. Formatting Corrections
+6. Prompting Corrections
+7. Content Corrections
+8. Words or Phrases To Avoid
+9. Approved Examples
+10. Updated Rules Moving Forward
+
+At the end, give me a simple instruction I can paste anytime I correct an output so you can update this feedback loop.</div>
+  </div>
+
+  <div class="narrative" style="margin-top:24px;margin-bottom:8px;">
+    <p>Then use this mini prompt every time something needs to be corrected and logged:</p>
+  </div>
+
+  <div class="action-block">
+    <div class="block-label">✏ Action required before copying</div>
+    <p>Fill in both placeholders with the specific correction before sending. This mini prompt is meant to be used repeatedly — once the feedback loop document exists, this is how you keep updating it.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-6b">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Fill in the placeholders, then copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 6 — Log</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-6b', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">Please add this correction to my project feedback loop.
+
+What was wrong:
+<span class="placeholder-pill">EXPLAIN WHAT FELT OFF</span>
+
+What I want instead:
+<span class="placeholder-pill">EXPLAIN THE PREFERENCE</span>
+
+Update the relevant rules so future outputs are more aligned.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- STEP 7 -->
+  <span class="section-anchor" id="step-7"></span>
+  <div class="section-label">Step 7 of 7</div>
+  <h2>Lock the Baseline</h2>
+  <div class="narrative">
+    <p>Once Claude is producing things that feel right, lock the profile. This is the last step. After this, the project is set.</p>
+  </div>
+
+  <div class="prompt-box" id="box-step-7">
+    <div class="prompt-header">
+      <div class="prompt-header-left">
+        <span class="prompt-arrow">→</span>
+        <span class="prompt-header-label">Copy &amp; paste into Claude</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <span class="prompt-number">Step 7</span>
+        <button class="copy-btn" onclick="copyPrompt('box-step-7', this)">Copy</button>
+      </div>
+    </div>
+    <div class="prompt-body">This version feels aligned.
+
+Please treat this as the baseline for this Claude Project moving forward.
+
+When I ask for content, visuals, prompts, strategy, offers, captions, carousels, course lessons, emails, or AI Twin work, use this project profile as the filter.
+
+When I say:
+
+make it more me
+make it more branded
+make it less AI
+make it more specific
+make it more emotional
+make it cleaner
+make it sharper
+make it more visual
+make it more premium
+make it more human
+this feels off
+
+Use the working profile, brand voice, visual style, AI Twin rules, and feedback loop to interpret what I mean.
+
+Do not make the output generic.
+Do not flatten the voice.
+Do not over-polish the personality.
+Do not ignore the small details.
+Do not make me repeat the same corrections over and over.
+
+Please confirm the main rules you are locking in for this project.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SIMPLE FLOW RECAP -->
+  <span class="section-anchor" id="simple-flow"></span>
+  <h2>The Simple Path Two Flow</h2>
+  <div class="narrative">
+    <p>For someone with AI history, they are not starting from zero. They are extracting what already exists. Here is the full flow, start to finish:</p>
+  </div>
+  <ol class="flow-list">
+    <li>Run The Digital Breadcrumbs prompt</li>
+    <li>Save the first extraction</li>
+    <li>Run Peeling Back The Layers</li>
+    <li>Save the deeper extraction</li>
+    <li>Lightly clean up the information</li>
+    <li>Paste the cleaned extraction into Claude</li>
+    <li>Ask Claude to build the working profile</li>
+    <li>Make Claude explain what it understands</li>
+    <li>Correct anything that feels off</li>
+    <li>Turn the profile into project documents</li>
+    <li>Test it with captions, image prompts, and strategy</li>
+    <li>Save corrections into a feedback loop</li>
+    <li>Lock the baseline once it feels aligned</li>
+  </ol>
+  <div class="narrative" style="margin-top:28px;">
+    <p>That is the real setup. Because the goal is not just to dump ChatGPT history into Claude. The goal is to make Claude stop acting like a stranger with a keyboard and start acting like a creative workspace that actually knows what room it just walked into.</p>
+    <p>Not by starting from scratch. By finally organizing what their old chats have been quietly collecting the whole time.</p>
+  </div>
+
+</div><!-- /wrapper -->
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-left">JUST BANK <span class="x-sep">×</span> BK BRANDS <span class="x-sep">×</span> SK</div>
+  <div class="footer-right">@justbankai</div>
+</footer>
+
+<script>
+  function copyPrompt(boxId, btn) {
+    const box = document.getElementById(boxId);
+    const bodyEl = box.querySelector('.prompt-body');
+
+    // Build text from child nodes — render placeholder pills as their text content
+    let text = '';
+    bodyEl.childNodes.forEach(node => {
+      if (node.nodeType === Node.TEXT_NODE) {
+        text += node.textContent;
+      } else if (node.nodeType === Node.ELEMENT_NODE) {
+        if (node.classList.contains('placeholder-pill')) {
+          text += '[ ' + node.textContent.trim() + ' ]';
+        } else {
+          text += node.textContent;
+        }
+      }
+    });
+
+    navigator.clipboard.writeText(text.trim()).then(() => {
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(() => {
+      // Fallback for older browsers
+      const ta = document.createElement('textarea');
+      ta.value = text.trim();
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+</body>
+</html>
